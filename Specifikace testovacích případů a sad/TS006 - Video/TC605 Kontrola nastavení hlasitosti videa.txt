@@ -1,0 +1,21 @@
+TC605 Kontrola nastavení hlasitosti videa
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování upravování hlasitosi videa na stránce -> https://www.zsmalse.cz/
+
+Manuální
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+Pre-conditions
+	Počkat dokud element videa bude viditelný
+
+1. Kliknout na spuštění videa
+2. Upravení hlasitosti videa pomocí posuvníku nebo tlačítek na ovládacím panelu
+3. Sledovat, zda se hlasitost mění podle očekávání
+
+
+
+Očekávaný výsledek: Hlasitost videa lze úspěšně upravit a změny jsou okamžitě slyšitelné

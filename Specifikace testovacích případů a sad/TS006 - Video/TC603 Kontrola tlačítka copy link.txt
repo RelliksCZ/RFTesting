@@ -1,0 +1,19 @@
+TC603 Kontrola tlačítka copy link
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování zkopírování yt odkazu na stránce -> https://www.zsmalse.cz/
+
+Manuální
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+
+1. Počkat dokud element tlačítka "copy link" bude viditelný
+2. Kliknout na element
+3. Otestování funkce vložení odkazu do textového pole nebo dokumentu, pro ověření funkčnosti
+
+
+
+Očekávaný výsledek: Odkaz je zkopírován do schránky a lze jej bez problémů vložit jinde

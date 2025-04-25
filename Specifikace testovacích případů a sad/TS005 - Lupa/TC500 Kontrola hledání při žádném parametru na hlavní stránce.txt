@@ -1,0 +1,20 @@
+TC500 Kontrola hledání při žádném parametru na hlavní stránce
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování hledání v lupě při žádném parametru na stránce -> https://www.zsmalse.cz/
+
+Manuální
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+
+1. Počkat dokud element lupy bude viditelný
+2. Kliknout na element
+3. Počkat dokud element tlačítka "Hledat" bude viditelný
+4. Kliknout na element
+
+
+
+Očekávaný výsledek: Kliknutím na tlačítko "Hledat" se přesměruje stránky na hl.stránku

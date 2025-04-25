@@ -1,0 +1,20 @@
+TC600 Kontrola spuštění videa na hlavní stánce při kliknutí na obrázek videa
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování videa na stránce -> https://www.zsmalse.cz/
+
+Manuální
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+
+1. Počkat dokud element obrázku videa bude viditelný
+2. Kliknout na element
+3. Sledovat, zda se video začne načítat a přehrávat
+4. Zkontrolovat kvalitu videa a zda přehrávání probíhá bez problémů
+
+
+
+Očekávaný výsledek: Kliknutím na obrázek videa dojde k jeho spuštění a bezproblémovému přehrávání

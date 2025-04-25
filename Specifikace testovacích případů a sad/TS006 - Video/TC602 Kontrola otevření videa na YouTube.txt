@@ -1,0 +1,21 @@
+TC602 Kontrola otevření videa na YouTube
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování přehrání videa na youtube stránce ze stránky -> https://www.zsmalse.cz/
+
+Manuální
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+
+1. Počkat dokud element youtube tlačítka videa bude viditelný
+2. Klikněte na odkaz vedoucí na YouTube video
+3. Sledujte, zda se video načte a otevře na stránce YouTube
+4. Ověřte, že video je správně zobrazeno a přehrává se
+5. Zkontrolujte funkčnost tlačítek pro řízení videa (přehrávání, pauza, atd.)
+
+
+
+Očekávaný výsledek: Odkaz správně přesměruje na YouTube a video se spustí

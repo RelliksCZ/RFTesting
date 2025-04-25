@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-07T17:11:05.471993" rpa="false" schemaversion="5">
+<suite id="s1" name="TS004 Layout" source="C:\Users\skill\PycharmProjects\AP4TS_Projekt\TS004_Layout.robot">
+<test id="s1-t1" name="Pre-conditions - Otevři prohlížeč a zajdi na URL" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:11:05.658990" level="INFO">Opening browser 'Chrome' to base url 'https://www.zsmalse.cz/'.</msg>
+<msg time="2024-05-07T17:11:05.940055" level="WARN">The chromedriver version (123.0.6312.86) detected in PATH at C:\Users\skill\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.119); currently, chromedriver 124.0.6367.91 is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL_MainPage_MainURL}</arg>
+<arg>${Browser_Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-07T17:11:05.658990" elapsed="2.846446"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-07T17:11:08.505436" elapsed="0.128028"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:11:08.638467" level="INFO">Current location is 'https://www.zsmalse.cz/'.</msg>
+<arg>${URL_MainPage_MainURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-07T17:11:08.634465" elapsed="0.004002"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_Cookies_OdmitnoutVse_XPathCZ}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:11:08.638467" elapsed="0.027008"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:11:08.666472" level="INFO">Clicking element '//button[@id='_cookies-deny-all']'.</msg>
+<arg>${Button_Cookies_OdmitnoutVse_XPathCZ}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:11:08.665475" elapsed="0.033004"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${Button_Cookies_Panel}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-05-07T17:11:08.698479" elapsed="0.730484"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:11:05.657989" elapsed="3.770974"/>
+</test>
+<test id="s1-t2" name="TC_400 Kontrola změny rozlišení obrázku při zmenšení stránky" line="20">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Img_Novinky3}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:11:09.430964" elapsed="0.011002"/>
+</kw>
+<kw name="Get Size Of Img" owner="Keywords">
+<kw name="Get Element Size" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:11:09.458075" level="INFO">${size} = (310, 240)</msg>
+<var>${size}</var>
+<arg>${locator}</arg>
+<doc>Returns width and height of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:11:09.442966" elapsed="0.015109"/>
+</kw>
+<return>
+<value>${size}</value>
+<status status="PASS" start="2024-05-07T17:11:09.458075" elapsed="0.000000"/>
+</return>
+<msg time="2024-05-07T17:11:09.458075" level="INFO">${original_size} = (310, 240)</msg>
+<var>${original_size}</var>
+<arg>${Img_Novinky3}</arg>
+<status status="PASS" start="2024-05-07T17:11:09.442966" elapsed="0.015109"/>
+</kw>
+<kw name="Change Window Size" owner="Keywords">
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>${width}</arg>
+<arg>${height}</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2024-05-07T17:11:09.459077" elapsed="0.219827"/>
+</kw>
+<arg>1200</arg>
+<arg>800</arg>
+<status status="PASS" start="2024-05-07T17:11:09.459077" elapsed="0.219827"/>
+</kw>
+<kw name="Get Size Of Img" owner="Keywords">
+<kw name="Get Element Size" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:11:09.693907" level="INFO">${size} = (267, 206)</msg>
+<var>${size}</var>
+<arg>${locator}</arg>
+<doc>Returns width and height of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:11:09.678904" elapsed="0.015003"/>
+</kw>
+<return>
+<value>${size}</value>
+<status status="PASS" start="2024-05-07T17:11:09.693907" elapsed="0.000000"/>
+</return>
+<msg time="2024-05-07T17:11:09.693907" level="INFO">${reduced_size} = (267, 206)</msg>
+<var>${reduced_size}</var>
+<arg>${Img_Novinky3}</arg>
+<status status="PASS" start="2024-05-07T17:11:09.678904" elapsed="0.015003"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${reduced_size[0]} &lt; ${original_size[0]} and ${reduced_size[1]} &lt; ${original_size[1]}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-05-07T17:11:09.694908" elapsed="0.004001"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:11:09.698909" level="INFO">Originální velikost: (310, 240), Zmenšená velikost: (267, 206)</msg>
+<arg>Originální velikost: ${original_size}, Zmenšená velikost: ${reduced_size}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:11:09.698909" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:11:09.698909" level="INFO">Otestování TC_400 proběhlo úspěšně, obrázek se zmenší</msg>
+<arg>Otestování TC_400 proběhlo úspěšně, obrázek se zmenší</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:11:09.698909" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:11:09.429964" elapsed="0.268945"/>
+</test>
+<test id="s1-t3" name="TC_401 Kontrola počtu obrázků při zmenšení stránky" line="29">
+<kw name="Change Window Size" owner="Keywords">
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>${width}</arg>
+<arg>${height}</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2024-05-07T17:11:09.699909" elapsed="0.117648"/>
+</kw>
+<arg>1200</arg>
+<arg>800</arg>
+<status status="PASS" start="2024-05-07T17:11:09.699909" elapsed="0.117648"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:11:09.825641" level="INFO">${img_count} = 23</msg>
+<var>${img_count}</var>
+<arg>css:img</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:11:09.818555" elapsed="0.007086"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${img_count} == 23</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-05-07T17:11:09.825919" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:11:09.825919" level="INFO">Počet obrázků na zmenšené stránce je: 23</msg>
+<arg>Počet obrázků na zmenšené stránce je: ${img_count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:11:09.825919" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:11:09.826930" level="INFO">Otestování TC_401 proběhlo úspěšně, počet obrázků je roven 23</msg>
+<arg>Otestování TC_401 proběhlo úspěšně, počet obrázků je roven 23</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:11:09.826930" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:11:09.699909" elapsed="0.127021"/>
+</test>
+<test id="s1-t4" name="TC_402 Zobrazení tlačítka menu při zmenšení stránky" line="37">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-07T17:11:09.826930" elapsed="0.112416"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:11:09.953566" level="INFO">Element '//button[@id='mobile-menu--open']' exists but is not displayed.</msg>
+<arg>${Button_MobilMenu}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2024-05-07T17:11:09.939346" elapsed="0.014220"/>
+</kw>
+<kw name="Change Window Size" owner="Keywords">
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>${width}</arg>
+<arg>${height}</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2024-05-07T17:11:09.954566" elapsed="0.218127"/>
+</kw>
+<arg>1200</arg>
+<arg>800</arg>
+<status status="PASS" start="2024-05-07T17:11:09.953566" elapsed="0.219127"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_MobilMenu}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.172693" elapsed="0.009657"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:11:10.183350" level="INFO">Otestování TC_402 proběhlo úspěšně, mobilní menu se zobrazí při zmenšení stránky</msg>
+<arg>Otestování TC_402 proběhlo úspěšně, mobilní menu se zobrazí při zmenšení stránky</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.182350" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:11:09.826930" elapsed="0.356420"/>
+</test>
+<test id="s1-t5" name="TC_403 Kontrola tlačítek v mobilním menu" line="44">
+<kw name="Change Window Size" owner="Keywords">
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>${width}</arg>
+<arg>${height}</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.184351" elapsed="0.111956"/>
+</kw>
+<arg>1200</arg>
+<arg>800</arg>
+<status status="PASS" start="2024-05-07T17:11:10.183350" elapsed="0.112957"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_MobilMenu}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.296307" elapsed="0.008002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:11:10.305309" level="INFO">Clicking element '//button[@id='mobile-menu--open']'.</msg>
+<arg>${Button_MobilMenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.305309" elapsed="0.020005"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-07T17:11:10.326314" level="INFO">${Button_x} = //body/div[@id='mobile-menu']/div[2]/nav[1]/ul[1]/li[1]</msg>
+<var>${Button_x}</var>
+<arg>${ButtonsForTC403}[${index}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.326314" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_x}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.326314" elapsed="0.225664"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:11:10.551978" level="INFO">Úspěšné zobrazení tlačítka //body/div[@id='mobile-menu']/div[2]/nav[1]/ul[1]/li[1] v menu.</msg>
+<arg>Úspěšné zobrazení tlačítka ${Button_x} v menu.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.551978" elapsed="0.000000"/>
+</kw>
+<var name="${index}">0</var>
+<status status="PASS" start="2024-05-07T17:11:10.325314" elapsed="0.226664"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-07T17:11:10.551978" level="INFO">${Button_x} = //body/div[@id='mobile-menu']/div[2]/nav[1]/ul[1]/li[2]</msg>
+<var>${Button_x}</var>
+<arg>${ButtonsForTC403}[${index}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.551978" elapsed="0.001000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_x}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.553066" elapsed="0.011002"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:11:10.565068" level="INFO">Úspěšné zobrazení tlačítka //body/div[@id='mobile-menu']/div[2]/nav[1]/ul[1]/li[2] v menu.</msg>
+<arg>Úspěšné zobrazení tlačítka ${Button_x} v menu.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.564068" elapsed="0.001000"/>
+</kw>
+<var name="${index}">1</var>
+<status status="PASS" start="2024-05-07T17:11:10.551978" elapsed="0.013090"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-07T17:11:10.565068" level="INFO">${Button_x} = //body/div[@id='mobile-menu']/div[2]/nav[1]/ul[1]/li[3]</msg>
+<var>${Button_x}</var>
+<arg>${ButtonsForTC403}[${index}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.565068" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_x}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.565068" elapsed="0.011102"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:11:10.576170" level="INFO">Úspěšné zobrazení tlačítka //body/div[@id='mobile-menu']/div[2]/nav[1]/ul[1]/li[3] v menu.</msg>
+<arg>Úspěšné zobrazení tlačítka ${Button_x} v menu.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.576170" elapsed="0.000000"/>
+</kw>
+<var name="${index}">2</var>
+<status status="PASS" start="2024-05-07T17:11:10.565068" elapsed="0.011102"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-07T17:11:10.576170" level="INFO">${Button_x} = //body/div[@id='mobile-menu']/div[2]/nav[1]/ul[1]/li[4]</msg>
+<var>${Button_x}</var>
+<arg>${ButtonsForTC403}[${index}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.576170" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_x}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.576170" elapsed="0.013003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:11:10.590173" level="INFO">Úspěšné zobrazení tlačítka //body/div[@id='mobile-menu']/div[2]/nav[1]/ul[1]/li[4] v menu.</msg>
+<arg>Úspěšné zobrazení tlačítka ${Button_x} v menu.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.589173" elapsed="0.001000"/>
+</kw>
+<var name="${index}">3</var>
+<status status="PASS" start="2024-05-07T17:11:10.576170" elapsed="0.014003"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-07T17:11:10.590173" level="INFO">${Button_x} = //body/div[@id='mobile-menu']/div[2]/nav[1]/ul[1]/li[5]</msg>
+<var>${Button_x}</var>
+<arg>${ButtonsForTC403}[${index}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.590173" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_x}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.590173" elapsed="0.012406"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:11:10.602579" level="INFO">Úspěšné zobrazení tlačítka //body/div[@id='mobile-menu']/div[2]/nav[1]/ul[1]/li[5] v menu.</msg>
+<arg>Úspěšné zobrazení tlačítka ${Button_x} v menu.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.602579" elapsed="0.000000"/>
+</kw>
+<var name="${index}">4</var>
+<status status="PASS" start="2024-05-07T17:11:10.590173" elapsed="0.013406"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-07T17:11:10.603579" level="INFO">${Button_x} = //body/div[@id='mobile-menu']/div[2]/nav[1]/ul[1]/li[6]</msg>
+<var>${Button_x}</var>
+<arg>${ButtonsForTC403}[${index}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.603579" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_x}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.603579" elapsed="0.012108"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:11:10.615687" level="INFO">Úspěšné zobrazení tlačítka //body/div[@id='mobile-menu']/div[2]/nav[1]/ul[1]/li[6] v menu.</msg>
+<arg>Úspěšné zobrazení tlačítka ${Button_x} v menu.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.615687" elapsed="0.000000"/>
+</kw>
+<var name="${index}">5</var>
+<status status="PASS" start="2024-05-07T17:11:10.603579" elapsed="0.012108"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-07T17:11:10.616687" level="INFO">${Button_x} = //body/div[@id='mobile-menu']/div[2]/nav[1]/ul[1]/li[7]</msg>
+<var>${Button_x}</var>
+<arg>${ButtonsForTC403}[${index}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.616687" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_x}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.616687" elapsed="0.011171"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:11:10.628857" level="INFO">Úspěšné zobrazení tlačítka //body/div[@id='mobile-menu']/div[2]/nav[1]/ul[1]/li[7] v menu.</msg>
+<arg>Úspěšné zobrazení tlačítka ${Button_x} v menu.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.628857" elapsed="0.000000"/>
+</kw>
+<var name="${index}">6</var>
+<status status="PASS" start="2024-05-07T17:11:10.615687" elapsed="0.013170"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-07T17:11:10.628857" level="INFO">${Button_x} = //body/div[@id='mobile-menu']/div[2]/nav[1]/ul[1]/li[8]</msg>
+<var>${Button_x}</var>
+<arg>${ButtonsForTC403}[${index}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.628857" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_x}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.628857" elapsed="0.012003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:11:10.641860" level="INFO">Úspěšné zobrazení tlačítka //body/div[@id='mobile-menu']/div[2]/nav[1]/ul[1]/li[8] v menu.</msg>
+<arg>Úspěšné zobrazení tlačítka ${Button_x} v menu.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.640860" elapsed="0.001000"/>
+</kw>
+<var name="${index}">7</var>
+<status status="PASS" start="2024-05-07T17:11:10.628857" elapsed="0.013003"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-07T17:11:10.641860" level="INFO">${Button_x} = //body/div[@id='mobile-menu']/div[2]/nav[1]/ul[1]/li[9]</msg>
+<var>${Button_x}</var>
+<arg>${ButtonsForTC403}[${index}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.641860" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_x}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.641860" elapsed="0.012003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:11:10.653863" level="INFO">Úspěšné zobrazení tlačítka //body/div[@id='mobile-menu']/div[2]/nav[1]/ul[1]/li[9] v menu.</msg>
+<arg>Úspěšné zobrazení tlačítka ${Button_x} v menu.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.653863" elapsed="0.000000"/>
+</kw>
+<var name="${index}">8</var>
+<status status="PASS" start="2024-05-07T17:11:10.641860" elapsed="0.012003"/>
+</iter>
+<var>${index}</var>
+<value>0</value>
+<value>9</value>
+<status status="PASS" start="2024-05-07T17:11:10.325314" elapsed="0.328549"/>
+</for>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:11:10.654863" level="INFO">Otestování TC_403 proběhlo úspěšně, tlačítka v menu se zobrazují</msg>
+<arg>Otestování TC_403 proběhlo úspěšně, tlačítka v menu se zobrazují</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.654863" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:11:10.183350" elapsed="0.471513"/>
+</test>
+<test id="s1-t6" name="Post-conditions" line="56">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-07T17:11:10.655863" elapsed="2.203655"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:11:12.859518" level="INFO">Všechny testy v layoutu proběhly</msg>
+<arg>Všechny testy v layoutu proběhly</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:11:12.859518" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:11:10.654863" elapsed="2.205656"/>
+</test>
+<status status="PASS" start="2024-05-07T17:11:05.473994" elapsed="7.386525"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="TS004 Layout">TS004 Layout</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-05-07T17:11:05.652988" level="WARN">Error in file 'C:\Users\skill\PycharmProjects\AP4TS_Projekt\ObjectRepository\Keywords.robot' on line 11: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-05-07T17:11:05.653989" level="WARN">Error in file 'C:\Users\skill\PycharmProjects\AP4TS_Projekt\ObjectRepository\Keywords.robot' on line 19: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-05-07T17:11:05.653989" level="WARN">Error in file 'C:\Users\skill\PycharmProjects\AP4TS_Projekt\ObjectRepository\Keywords.robot' on line 44: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-05-07T17:11:05.940055" level="WARN">The chromedriver version (123.0.6312.86) detected in PATH at C:\Users\skill\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.119); currently, chromedriver 124.0.6367.91 is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

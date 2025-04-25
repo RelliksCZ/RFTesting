@@ -1,0 +1,18 @@
+TC110 - Kontrola menu části Logo
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování části Loga v menu na stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Zkontrolovat přítomnost elementu logo
+2. Na stránce se nachází odkaz v elementu logo
+3. Otevře domovskou stránku
+4. Stránka by měla mít po kliknutí domovské URL.
+
+
+Očekávaný výsledek: Při kliknutí na logo se přesměruje stránka na hlavní stránku

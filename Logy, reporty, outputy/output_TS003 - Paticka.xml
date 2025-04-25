@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-07T17:16:10.757653" rpa="false" schemaversion="5">
+<suite id="s1" name="TS003 Paticka" source="C:\Users\skill\PycharmProjects\AP4TS_Projekt\TS003_Paticka.robot">
+<test id="s1-t1" name="Pre-conditions - Otevři prohlížeč, zajdi na URL klikni na Cookies" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:10.943696" level="INFO">Opening browser 'Chrome' to base url 'https://www.zsmalse.cz/'.</msg>
+<msg time="2024-05-07T17:16:11.236761" level="WARN">The chromedriver version (123.0.6312.86) detected in PATH at C:\Users\skill\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.119); currently, chromedriver 124.0.6367.91 is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL_MainPage_MainURL}</arg>
+<arg>${Browser_Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-07T17:16:10.943696" elapsed="2.597444"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-07T17:16:13.542139" elapsed="0.116031"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:13.662171" level="INFO">Current location is 'https://www.zsmalse.cz/'.</msg>
+<arg>${URL_MainPage_MainURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-07T17:16:13.658170" elapsed="0.004001"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_Cookies_OdmitnoutVse_XPathCZ}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:16:13.662171" elapsed="0.022005"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:13.684176" level="INFO">Clicking element '//button[@id='_cookies-deny-all']'.</msg>
+<arg>${Button_Cookies_OdmitnoutVse_XPathCZ}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:13.684176" elapsed="0.031524"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${Button_Cookies_Panel}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-05-07T17:16:13.716700" elapsed="0.737191"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:16:10.942695" elapsed="3.511196"/>
+</test>
+<test id="s1-t2" name="TC_300 Kontrola odkazu &quot;Město Zlín&quot; v sekci &quot;Užitečné odkazy&quot;" line="20">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_ZlinEU}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:16:14.454891" elapsed="0.014003"/>
+</kw>
+<kw name="Get URL From New Tab" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:14.469894" level="INFO">Clicking element '//a[contains(text(),'Město Zlín')]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:14.468894" elapsed="0.049012"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:14.531909" level="INFO">${all_windows} = ['65417B65A230BC5F6E3848CF34CCA308', '9F0FEF19D93ED70107C8B114B522F6A9']</msg>
+<var>${all_windows}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2024-05-07T17:16:14.517906" elapsed="0.014003"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-07T17:16:14.532908" level="INFO">${current_window} = 65417B65A230BC5F6E3848CF34CCA308</msg>
+<var>${current_window}</var>
+<arg>${all_windows}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-07T17:16:14.532908" elapsed="0.000000"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${all_windows}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:14.532908" elapsed="0.030007"/>
+</kw>
+<return>
+<value>${current_window}</value>
+<status status="PASS" start="2024-05-07T17:16:14.562915" elapsed="0.000000"/>
+</return>
+<msg time="2024-05-07T17:16:14.562915" level="INFO">${current_window} = 65417B65A230BC5F6E3848CF34CCA308</msg>
+<var>${current_window}</var>
+<arg>${Button_ZlinEU}</arg>
+<status status="PASS" start="2024-05-07T17:16:14.468894" elapsed="0.094021"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:17.343762" level="INFO">Current location is 'https://www.zlin.eu/'.</msg>
+<arg>${URL_ZlinEU}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-07T17:16:14.562915" elapsed="2.780847"/>
+</kw>
+<kw name="Return To Previous Tab" owner="Keywords">
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2024-05-07T17:16:17.344761" elapsed="0.060014"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${previous_window}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:17.404775" elapsed="0.002000"/>
+</kw>
+<arg>${current_window}</arg>
+<status status="PASS" start="2024-05-07T17:16:17.344761" elapsed="0.062014"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:16:17.407775" level="INFO">Otestování TC_300 proběhlo úspěšně, odkaz je funkční, proběhlo i navrácení na hl stránku</msg>
+<arg>Otestování TC_300 proběhlo úspěšně, odkaz je funkční, proběhlo i navrácení na hl stránku</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:16:17.407775" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:16:14.454891" elapsed="2.952884"/>
+</test>
+<test id="s1-t3" name="TC_301 Kontrola odkazu &quot;Krajská pedagogicko-psychologická poradna&quot; v sekci &quot;Užitečné odkazy&quot;" line="27">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_KrajskaPoradna}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:16:17.408776" elapsed="0.017004"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:17.425780" level="INFO">Clicking element '//a[contains(text(),'Krajská pedagogicko-psychologická poradna')]'.</msg>
+<arg>${Button_KrajskaPoradna}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:17.425780" elapsed="1.441672"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:18.871452" level="INFO">Current location is 'https://poradnazl.cz/'.</msg>
+<arg>${URL_KrajskaPoradna}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-07T17:16:18.867452" elapsed="0.004000"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2024-05-07T17:16:18.871452" elapsed="0.406167"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:16:19.277619" level="INFO">Otestování TC_301 proběhlo úspěšně, odkaz je funkční</msg>
+<arg>Otestování TC_301 proběhlo úspěšně, odkaz je funkční</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:16:19.277619" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:16:17.408776" elapsed="1.869843"/>
+</test>
+<test id="s1-t4" name="TC_302 Kontrola odkazu &quot;Dopravní spojení&quot; v sekci &quot;Užitečné odkazy&quot;" line="34">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_DSZO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:16:19.278619" elapsed="0.018004"/>
+</kw>
+<kw name="Get URL From New Tab" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:19.297623" level="INFO">Clicking element '//a[contains(text(),'Dopravní spojení')]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:19.297623" elapsed="0.045010"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:19.348634" level="INFO">${all_windows} = ['65417B65A230BC5F6E3848CF34CCA308', 'B7381F35ED6AEC15E5C97591C4820FEC']</msg>
+<var>${all_windows}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2024-05-07T17:16:19.342633" elapsed="0.007001"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-07T17:16:19.349634" level="INFO">${current_window} = 65417B65A230BC5F6E3848CF34CCA308</msg>
+<var>${current_window}</var>
+<arg>${all_windows}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-07T17:16:19.349634" elapsed="0.000000"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${all_windows}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:19.349634" elapsed="0.031008"/>
+</kw>
+<return>
+<value>${current_window}</value>
+<status status="PASS" start="2024-05-07T17:16:19.380642" elapsed="0.000000"/>
+</return>
+<msg time="2024-05-07T17:16:19.380642" level="INFO">${current_window} = 65417B65A230BC5F6E3848CF34CCA308</msg>
+<var>${current_window}</var>
+<arg>${Button_DSZO}</arg>
+<status status="PASS" start="2024-05-07T17:16:19.297623" elapsed="0.083019"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:21.210386" level="INFO">Current location is 'https://www.dszo.cz/'.</msg>
+<arg>${URL_DSZO}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-07T17:16:19.381642" elapsed="1.828744"/>
+</kw>
+<kw name="Return To Previous Tab" owner="Keywords">
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.211386" elapsed="0.057014"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${previous_window}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.268400" elapsed="0.003001"/>
+</kw>
+<arg>${current_window}</arg>
+<status status="PASS" start="2024-05-07T17:16:21.211386" elapsed="0.060015"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:16:21.271401" level="INFO">Otestování TC_302 proběhlo úspěšně, odkaz je funkční, proběhlo i navrácení na hl stránku</msg>
+<arg>Otestování TC_302 proběhlo úspěšně, odkaz je funkční, proběhlo i navrácení na hl stránku</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.271401" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:16:19.278619" elapsed="1.992782"/>
+</test>
+<test id="s1-t5" name="TC_303 Kontrola odkazu &quot;Informace a návod&quot; v sekci &quot;Žákovská knížka&quot;" line="41">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_InformaceAnavod}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.272401" elapsed="0.016003"/>
+</kw>
+<kw name="Get URL From New Tab" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:21.289404" level="INFO">Clicking element '//a[contains(text(),'Informace a návod')]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.289404" elapsed="0.048013"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:21.343416" level="INFO">${all_windows} = ['65417B65A230BC5F6E3848CF34CCA308', '4C691EE36F59C525D03FAE2433D7A9D6']</msg>
+<var>${all_windows}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.337417" elapsed="0.005999"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-07T17:16:21.343416" level="INFO">${current_window} = 65417B65A230BC5F6E3848CF34CCA308</msg>
+<var>${current_window}</var>
+<arg>${all_windows}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.343416" elapsed="0.000000"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${all_windows}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.343416" elapsed="0.034008"/>
+</kw>
+<return>
+<value>${current_window}</value>
+<status status="PASS" start="2024-05-07T17:16:21.377424" elapsed="0.000000"/>
+</return>
+<msg time="2024-05-07T17:16:21.378425" level="INFO">${current_window} = 65417B65A230BC5F6E3848CF34CCA308</msg>
+<var>${current_window}</var>
+<arg>${Button_InformaceAnavod}</arg>
+<status status="PASS" start="2024-05-07T17:16:21.289404" elapsed="0.089021"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:21.403431" level="INFO">Current location is 'https://www.zsmalse.cz/media/assets/EZK_na_web.pdf'.</msg>
+<arg>${URL_InformaceAnavod}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.378425" elapsed="0.025006"/>
+</kw>
+<kw name="Return To Previous Tab" owner="Keywords">
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.404431" elapsed="0.053980"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${previous_window}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.458411" elapsed="0.003002"/>
+</kw>
+<arg>${current_window}</arg>
+<status status="PASS" start="2024-05-07T17:16:21.404431" elapsed="0.056982"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:16:21.461413" level="INFO">Otestování TC_303 proběhlo úspěšně, odkaz je funkční, proběhlo i navrácení na hl stránku</msg>
+<arg>Otestování TC_303 proběhlo úspěšně, odkaz je funkční, proběhlo i navrácení na hl stránku</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.461413" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:16:21.272401" elapsed="0.189012"/>
+</test>
+<test id="s1-t6" name="TC_304 Kontrola odkazu &quot;Časté dotazy&quot; v sekci &quot;Žákovská knížka&quot;" line="48">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_CasteDotazy}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.462413" elapsed="0.014003"/>
+</kw>
+<kw name="Get URL From New Tab" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:21.476416" level="INFO">Clicking element '//a[contains(text(),'Časté dotazy')]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.476416" elapsed="0.047011"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:21.529428" level="INFO">${all_windows} = ['65417B65A230BC5F6E3848CF34CCA308', 'C76793BD0B4684EF0896F9B419439453']</msg>
+<var>${all_windows}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.524427" elapsed="0.005001"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-07T17:16:21.529428" level="INFO">${current_window} = 65417B65A230BC5F6E3848CF34CCA308</msg>
+<var>${current_window}</var>
+<arg>${all_windows}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.529428" elapsed="0.000000"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${all_windows}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.529428" elapsed="0.027007"/>
+</kw>
+<return>
+<value>${current_window}</value>
+<status status="PASS" start="2024-05-07T17:16:21.557435" elapsed="0.000000"/>
+</return>
+<msg time="2024-05-07T17:16:21.557435" level="INFO">${current_window} = 65417B65A230BC5F6E3848CF34CCA308</msg>
+<var>${current_window}</var>
+<arg>${Button_CasteDotazy}</arg>
+<status status="PASS" start="2024-05-07T17:16:21.476416" elapsed="0.081019"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:21.594445" level="INFO">Current location is 'https://www.zsmalse.cz/media/userfiles/VysvetlivkyEZK.pdf'.</msg>
+<arg>${URL_CasteDotazy}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.558435" elapsed="0.036010"/>
+</kw>
+<kw name="Return To Previous Tab" owner="Keywords">
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.595445" elapsed="0.067025"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${previous_window}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.662470" elapsed="0.002000"/>
+</kw>
+<arg>${current_window}</arg>
+<status status="PASS" start="2024-05-07T17:16:21.594445" elapsed="0.070025"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:16:21.665469" level="INFO">Otestování TC_304 proběhlo úspěšně, odkaz je funkční, proběhlo i navrácení na hl stránku</msg>
+<arg>Otestování TC_304 proběhlo úspěšně, odkaz je funkční, proběhlo i navrácení na hl stránku</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.665469" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:16:21.462413" elapsed="0.203056"/>
+</test>
+<test id="s1-t7" name="TC_305 Kontrola odkazu &quot;Žákovská knížka&quot; v sekci &quot;Žákovská knížka&quot;" line="55">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_ZakovskaKnizka}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.666472" elapsed="0.013003"/>
+</kw>
+<kw name="Get URL From New Tab" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:21.679475" level="INFO">Clicking element '//body/footer[1]/div[1]/div[1]/div[1]/div[1]/ul[2]/li[3]/a[1]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.679475" elapsed="0.057011"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:21.743487" level="INFO">${all_windows} = ['65417B65A230BC5F6E3848CF34CCA308', 'CA4973893AD088E27089FEC126669CE3']</msg>
+<var>${all_windows}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.736486" elapsed="0.007001"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-07T17:16:21.744488" level="INFO">${current_window} = 65417B65A230BC5F6E3848CF34CCA308</msg>
+<var>${current_window}</var>
+<arg>${all_windows}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.744488" elapsed="0.000000"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${all_windows}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.744488" elapsed="0.041009"/>
+</kw>
+<return>
+<value>${current_window}</value>
+<status status="PASS" start="2024-05-07T17:16:21.785497" elapsed="0.000000"/>
+</return>
+<msg time="2024-05-07T17:16:21.786499" level="INFO">${current_window} = 65417B65A230BC5F6E3848CF34CCA308</msg>
+<var>${current_window}</var>
+<arg>${Button_ZakovskaKnizka}</arg>
+<status status="PASS" start="2024-05-07T17:16:21.679475" elapsed="0.107024"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:22.123422" level="INFO">Current location is 'https://skola.zsmalse.cz/bakaweb/Login'.</msg>
+<arg>${URL_ZakovskaKnizka}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-07T17:16:21.786499" elapsed="0.336923"/>
+</kw>
+<kw name="Return To Previous Tab" owner="Keywords">
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2024-05-07T17:16:22.124422" elapsed="0.056015"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${previous_window}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:22.180437" elapsed="0.003000"/>
+</kw>
+<arg>${current_window}</arg>
+<status status="PASS" start="2024-05-07T17:16:22.123422" elapsed="0.060015"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:16:22.184438" level="INFO">Otestování TC_305 proběhlo úspěšně, odkaz je funkční, proběhlo i navrácení na hl stránku</msg>
+<arg>Otestování TC_305 proběhlo úspěšně, odkaz je funkční, proběhlo i navrácení na hl stránku</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:16:22.183437" elapsed="0.001001"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:16:21.666472" elapsed="0.517966"/>
+</test>
+<test id="s1-t8" name="TC_306 Kontrola odkazu &quot;Co je ekoškola&quot; v sekci &quot;Ekoškola&quot;" line="62">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_CoJeEkoskola}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:16:22.184438" elapsed="0.014003"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:22.198441" level="INFO">Clicking element '//a[contains(text(),'Co je ekoškola')]'.</msg>
+<arg>${Button_CoJeEkoskola}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:22.198441" elapsed="0.551248"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:22.751689" level="INFO">Current location is 'https://www.zsmalse.cz/co-je-ekoskola'.</msg>
+<arg>${URL_CoJeEkoskola}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-07T17:16:22.749689" elapsed="0.002000"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2024-05-07T17:16:22.752689" elapsed="0.265070"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:16:23.018759" level="INFO">Otestování TC_306 proběhlo úspěšně, odkaz je funkční</msg>
+<arg>Otestování TC_306 proběhlo úspěšně, odkaz je funkční</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:16:23.018759" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:16:22.184438" elapsed="0.834321"/>
+</test>
+<test id="s1-t9" name="TC_307 Kontrola odkazu &quot;Témata ekoškoly&quot; v sekci &quot;Ekoškola&quot;" line="69">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_TemataEkoskoly}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:16:23.020764" elapsed="0.015998"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:23.036762" level="INFO">Clicking element '//a[contains(text(),'Témata ekoškoly')]'.</msg>
+<arg>${Button_TemataEkoskoly}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:23.036762" elapsed="0.379725"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:23.419487" level="INFO">Current location is 'https://www.zsmalse.cz/temata-ekoskoly'.</msg>
+<arg>${URL_TemataEkoskoly}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-07T17:16:23.417487" elapsed="0.002000"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2024-05-07T17:16:23.419487" elapsed="0.280064"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:16:23.700551" level="INFO">Otestování TC_307 proběhlo úspěšně, odkaz je funkční</msg>
+<arg>Otestování TC_307 proběhlo úspěšně, odkaz je funkční</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:16:23.700551" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:16:23.019760" elapsed="0.680791"/>
+</test>
+<test id="s1-t10" name="TC_308 Kontrola odkazu &quot;7 kroků k ekoškole&quot; v sekci &quot;Ekoškola&quot;" line="76">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_SedmKrokuKekoskole}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:16:23.701552" elapsed="0.019004"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:23.721556" level="INFO">Clicking element '//a[contains(text(),'7 kroků k ekoškole')]'.</msg>
+<arg>${Button_SedmKrokuKekoskole}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:23.720556" elapsed="1.236257"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:24.958814" level="INFO">Current location is 'https://www.zsmalse.cz/7-kroku-k-ekoskole'.</msg>
+<arg>${URL_SedmKrokuKekoskole}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-07T17:16:24.956813" elapsed="0.002001"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2024-05-07T17:16:24.959814" elapsed="0.234961"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:16:25.195775" level="INFO">Otestování TC_308 proběhlo úspěšně, odkaz je funkční</msg>
+<arg>Otestování TC_308 proběhlo úspěšně, odkaz je funkční</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:16:25.195775" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:16:23.701552" elapsed="1.494223"/>
+</test>
+<test id="s1-t11" name="TC_309 Kontrola odkazu &quot;Ekonoviny&quot; v sekci &quot;Ekoškola&quot;" line="83">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_Ekonoviny}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:16:25.196778" elapsed="0.015001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:25.211779" level="INFO">Clicking element '//a[contains(text(),'Ekonoviny')]'.</msg>
+<arg>${Button_Ekonoviny}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:25.211779" elapsed="1.738081"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:26.953861" level="INFO">Current location is 'https://www.zsmalse.cz/ekonoviny'.</msg>
+<arg>${URL_Ekonoviny}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-07T17:16:26.949860" elapsed="0.004001"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2024-05-07T17:16:26.953861" elapsed="0.302070"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:16:27.256931" level="INFO">Otestování TC_309 proběhlo úspěšně, odkaz je funkční</msg>
+<arg>Otestování TC_309 proběhlo úspěšně, odkaz je funkční</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:16:27.256931" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:16:25.196778" elapsed="2.060153"/>
+</test>
+<test id="s1-t12" name="TC_310 Kontrola odkazu &quot;Organizace školního roku 2023/2024&quot; v sekci &quot;Školní rok 2023/2024&quot;" line="90">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_OrganizaceSkolnihoRoku}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:16:27.257931" elapsed="0.016003"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:27.274935" level="INFO">Clicking element '//a[contains(text(),'Organizace školního roku 2023/202')]'.</msg>
+<arg>${Button_OrganizaceSkolnihoRoku}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:27.274935" elapsed="0.297559"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:27.576495" level="INFO">Current location is 'https://www.zsmalse.cz/organizace-skolniho-roku-20212022'.</msg>
+<arg>${URL_OrganizaceSkolnihoRoku}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-07T17:16:27.572494" elapsed="0.004001"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2024-05-07T17:16:27.576495" elapsed="0.246061"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:16:27.822556" level="INFO">Otestování TC_310 proběhlo úspěšně, odkaz je funkční</msg>
+<arg>Otestování TC_310 proběhlo úspěšně, odkaz je funkční</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:16:27.822556" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:16:27.257931" elapsed="0.565625"/>
+</test>
+<test id="s1-t13" name="TC_311 Kontrola odkazu &quot;Závazné termíny&quot; v sekci &quot;Školní rok 2023/2024&quot;" line="97">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_ZavazneTerminy}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:16:27.824557" elapsed="0.014002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:27.839560" level="INFO">Clicking element '//a[contains(text(),'Závazné termíny')]'.</msg>
+<arg>${Button_ZavazneTerminy}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:27.839560" elapsed="0.320399"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:28.162959" level="INFO">Current location is 'https://www.zsmalse.cz/zavazne-terminy'.</msg>
+<arg>${URL_ZavazneTerminy}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-07T17:16:28.159959" elapsed="0.003000"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2024-05-07T17:16:28.162959" elapsed="0.249176"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:16:28.413136" level="INFO">Otestování TC_311 proběhlo úspěšně, odkaz je funkční</msg>
+<arg>Otestování TC_311 proběhlo úspěšně, odkaz je funkční</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:16:28.412135" elapsed="0.001001"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:16:27.823556" elapsed="0.589580"/>
+</test>
+<test id="s1-t14" name="TC_312 Kontrola odkazu &quot;Projekty&quot; v sekci &quot;Školní rok 2023/2024&quot;" line="104">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_Projekty}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:16:28.414135" elapsed="0.015004"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:28.429139" level="INFO">Clicking element '//a[contains(text(),'Projekty')]'.</msg>
+<arg>${Button_Projekty}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:28.429139" elapsed="0.973243"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:29.405383" level="INFO">Current location is 'https://www.zsmalse.cz/projekty'.</msg>
+<arg>${URL_Projekty}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-07T17:16:29.403383" elapsed="0.002000"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2024-05-07T17:16:29.405383" elapsed="0.244056"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:16:29.650440" level="INFO">Otestování TC_312 proběhlo úspěšně, odkaz je funkční</msg>
+<arg>Otestování TC_312 proběhlo úspěšně, odkaz je funkční</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:16:29.649439" elapsed="0.001001"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:16:28.413136" elapsed="1.237304"/>
+</test>
+<test id="s1-t15" name="TC_313 Kontrola odkazu &quot;Zaměstnanci&quot; v sekci &quot;Školní rok 2023/2024&quot;" line="111">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_Zamestnanci}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:16:29.651440" elapsed="0.014002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:29.666443" level="INFO">Clicking element '//a[contains(text(),'Zaměstnanci')]'.</msg>
+<arg>${Button_Zamestnanci}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:29.665442" elapsed="0.785456"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:30.452897" level="INFO">Current location is 'https://www.zsmalse.cz/zamestnanci'.</msg>
+<arg>${URL_Zamestnanci}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-07T17:16:30.450898" elapsed="0.003000"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2024-05-07T17:16:30.453898" elapsed="0.252162"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:16:30.707060" level="INFO">Otestování TC_313 proběhlo úspěšně, odkaz je funkční</msg>
+<arg>Otestování TC_313 proběhlo úspěšně, odkaz je funkční</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:16:30.706060" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:16:29.650440" elapsed="1.056620"/>
+</test>
+<test id="s1-t16" name="TC_314 Kontrola odkazu &quot;2023/2024&quot; v sekci &quot;Školní bulletin&quot;" line="118">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_2023/2024}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:16:30.708063" elapsed="0.014002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:30.722065" level="INFO">Clicking element '//body/footer[1]/div[1]/div[1]/div[1]/div[2]/ul[2]/li[1]/a[1]'.</msg>
+<arg>${Button_2023/2024}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:30.722065" elapsed="0.102169"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:30.830235" level="INFO">Current location is 'https://www.zsmalse.cz/media/userfiles/dokumenty/2023_2024/Skolni_bulletin_2023_2024.pdf'.</msg>
+<arg>${URL_2023/2024}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-07T17:16:30.824234" elapsed="0.006001"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2024-05-07T17:16:30.830235" elapsed="0.231052"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:16:31.061287" level="INFO">Otestování TC_314 proběhlo úspěšně, odkaz je funkční</msg>
+<arg>Otestování TC_314 proběhlo úspěšně, odkaz je funkční</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:16:31.061287" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:16:30.707060" elapsed="0.354227"/>
+</test>
+<test id="s1-t17" name="TC_315 Kontrola odkazu Office 365" line="125">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_Office}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:16:31.062287" elapsed="0.014003"/>
+</kw>
+<kw name="Get URL From New Tab" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:31.076290" level="INFO">Clicking element '//a[contains(text(),'Přihlášení')]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:31.076290" elapsed="0.043010"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:31.126303" level="INFO">${all_windows} = ['65417B65A230BC5F6E3848CF34CCA308', '0B57A77D1BFD4215CE027B129CE1AD2A']</msg>
+<var>${all_windows}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2024-05-07T17:16:31.119300" elapsed="0.007003"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-07T17:16:31.126303" level="INFO">${current_window} = 65417B65A230BC5F6E3848CF34CCA308</msg>
+<var>${current_window}</var>
+<arg>${all_windows}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-07T17:16:31.126303" elapsed="0.000000"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${all_windows}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:31.127303" elapsed="0.026005"/>
+</kw>
+<return>
+<value>${current_window}</value>
+<status status="PASS" start="2024-05-07T17:16:31.153308" elapsed="0.000000"/>
+</return>
+<msg time="2024-05-07T17:16:31.154309" level="INFO">${current_window} = 65417B65A230BC5F6E3848CF34CCA308</msg>
+<var>${current_window}</var>
+<arg>${Button_Office}</arg>
+<status status="PASS" start="2024-05-07T17:16:31.076290" elapsed="0.078019"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:32.464188" level="INFO">Current location is 'https://www.office.com/?omkt=cs-cz'.</msg>
+<arg>${URL_Office}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-07T17:16:31.154309" elapsed="1.309879"/>
+</kw>
+<kw name="Return To Previous Tab" owner="Keywords">
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2024-05-07T17:16:32.465187" elapsed="0.059015"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${previous_window}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:32.524202" elapsed="0.003000"/>
+</kw>
+<arg>${current_window}</arg>
+<status status="PASS" start="2024-05-07T17:16:32.464188" elapsed="0.063014"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:16:32.528202" level="INFO">Otestování TC_315 proběhlo úspěšně, odkaz je funkční, proběhlo i navrácení na hl stránku</msg>
+<arg>Otestování TC_315 proběhlo úspěšně, odkaz je funkční, proběhlo i navrácení na hl stránku</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:16:32.528202" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:16:31.062287" elapsed="1.465915"/>
+</test>
+<test id="s1-t18" name="TC_316 Kontrola odkazu tel. čísel" line="132">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Link_TelCislo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:16:32.529203" elapsed="0.014002"/>
+</kw>
+<kw name="Check Phone Number" owner="Keywords">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:32.558209" level="INFO">${link_text} = +420 577 431 387</msg>
+<var>${link_text}</var>
+<arg>${TelCislo}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:32.544206" elapsed="0.014003"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>'${link_text}' != ''</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-05-07T17:16:32.558209" elapsed="0.001000"/>
+</kw>
+<arg>${Link_TelCislo}</arg>
+<status status="PASS" start="2024-05-07T17:16:32.544206" elapsed="0.015003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:16:32.559209" level="INFO">Tel. číslo //a[contains(text(),'+420 577 431 387')] funguje správně</msg>
+<arg>Tel. číslo ${Link_TelCislo} funguje správně</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:16:32.559209" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:16:32.559209" level="INFO">Otestování TC_316 proběhlo úspěšně, odkaz tel. čísla je funkční</msg>
+<arg>Otestování TC_316 proběhlo úspěšně, odkaz tel. čísla je funkční</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:16:32.559209" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:16:32.528202" elapsed="0.032007"/>
+</test>
+<test id="s1-t19" name="TC_317 Kontrola odkazu emailu" line="138">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Link_Email}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T17:16:32.560209" elapsed="0.013004"/>
+</kw>
+<kw name="Check Email" owner="Keywords">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-07T17:16:32.586215" level="INFO">${link_text} = zsmalse@zsmalse.cz</msg>
+<var>${link_text}</var>
+<arg>//a[contains(text(),'${OcekavanyEmail}')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T17:16:32.574213" elapsed="0.012002"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${link_text}</arg>
+<arg>${OcekavanyEmail}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-07T17:16:32.586215" elapsed="0.001001"/>
+</kw>
+<arg>${Link_Email}</arg>
+<arg>zsmalse@zsmalse.cz</arg>
+<status status="PASS" start="2024-05-07T17:16:32.573213" elapsed="0.014003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:16:32.587216" level="INFO">Tel. číslo //a[contains(text(),'zsmalse@zsmalse.cz')] funguje správně</msg>
+<arg>Tel. číslo ${Link_Email} funguje správně</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:16:32.587216" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:16:32.587216" level="INFO">Otestování TC_316 proběhlo úspěšně, odkaz emailu je funkční</msg>
+<arg>Otestování TC_316 proběhlo úspěšně, odkaz emailu je funkční</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:16:32.587216" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:16:32.560209" elapsed="0.028007"/>
+</test>
+<test id="s1-t20" name="Post-conditions" line="144">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-07T17:16:32.588216" elapsed="2.196982"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-07T17:16:34.785198" level="INFO">Všechny testy v patičce proběhly</msg>
+<arg>Všechny testy v patičce proběhly</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-07T17:16:34.785198" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2024-05-07T17:16:32.588216" elapsed="2.197982"/>
+</test>
+<status status="PASS" start="2024-05-07T17:16:10.758654" elapsed="24.027544"/>
+</suite>
+<statistics>
+<total>
+<stat pass="20" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="20" fail="0" skip="0" id="s1" name="TS003 Paticka">TS003 Paticka</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-05-07T17:16:10.938694" level="WARN">Error in file 'C:\Users\skill\PycharmProjects\AP4TS_Projekt\ObjectRepository\Keywords.robot' on line 11: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-05-07T17:16:10.938694" level="WARN">Error in file 'C:\Users\skill\PycharmProjects\AP4TS_Projekt\ObjectRepository\Keywords.robot' on line 19: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-05-07T17:16:10.939694" level="WARN">Error in file 'C:\Users\skill\PycharmProjects\AP4TS_Projekt\ObjectRepository\Keywords.robot' on line 44: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-05-07T17:16:11.236761" level="WARN">The chromedriver version (123.0.6312.86) detected in PATH at C:\Users\skill\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.119); currently, chromedriver 124.0.6367.91 is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

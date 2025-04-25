@@ -1,0 +1,17 @@
+TC703 Kontrola otevření PDF
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování otevírání pdf na stránce -> https://www.zsmalse.cz/o-skole
+
+Manuální
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+Pre-conditions
+	1. Otevřená stránka s URL https://www.zsmalse.cz/O-skole
+
+1. Počkat než bude element s pdf linkem viditelný
+2. Klikněte na odkaz pdf
+3. Počkejte, až se soubor načte a zobrazí v prohlížeči PDF.

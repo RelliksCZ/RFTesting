@@ -1,0 +1,17 @@
+TC207 Kontrola počtu novinek na stránce
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování zda počet novinek je roven 8 na hlavní stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Získát počet elementů novinek
+2. Počet novinek by měl být roven 8
+3. Log o přesném počtu novinek
+
+
+Očekávaný výsledek: Počet příspěvků na hlavní stránce bude roven 8

@@ -1,0 +1,18 @@
+TC301 Kontrola odkazu Krajská pedagogicko-psychologická poradna v sekci Užitečné odkazy
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování odkazu "Kraj. ped. poradna" v patičce "Užitečné odkazy" na hlavní stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Zkontrolovat přítomnost elementu "Kraj. ped. poradna"
+2. Klikutí na element "Kraj. ped. poradna"
+3. Lokace by měla být stejná jako odkaz elementu
+4. Jít zpět na hl. stránku
+
+
+Očekávaný výsledek: Kliknutím na tlačítko se otevře URL "Kraj. ped. poradna".

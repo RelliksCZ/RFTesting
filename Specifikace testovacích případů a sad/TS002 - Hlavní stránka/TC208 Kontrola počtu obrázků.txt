@@ -1,0 +1,17 @@
+TC208 Kontrola počtu obrázků
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování zda počet obrázků je menší než 30 na hlavní stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Získát počet obrázků
+2. Počet obrázků by měl být menší než 30
+3. Log o přesném počtu obrázků
+
+
+Očekávaný výsledek: Počet obrázků na hlavní stránce bude 23, takže bude menší než 30

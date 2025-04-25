@@ -1,0 +1,17 @@
+TC700 Kontrola nadpisu na stránce
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování nadpisu na stránce -> https://www.zsmalse.cz/o-skole
+
+Manuální
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+Pre-conditions
+	1. Otevřená stránka s URL https://www.zsmalse.cz/O-skole
+
+1. Element nadpisu by měl být viditelný
+2. Ověřte správné umístění nadpisu vůči ostatním prvkům stránky
+3. Zkontrolujte, zda text nadpisu je roven "O škole"

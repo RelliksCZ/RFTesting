@@ -1,0 +1,16 @@
+TC316 Kontrola odkazu tel. čísel
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování tel. čísla v patičce na hlavní stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Zkontrolovat přítomnost elementu tel. čísla
+2. Keyword Check Phone Number -> získání textu elementu, stringy by měly být stejné
+
+
+Očekávaný výsledek: Odkaz čísla by měl být stejný jako text.

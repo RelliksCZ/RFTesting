@@ -1,0 +1,19 @@
+TC300 Kontrola odkazu "Město Zlín" v sekci "Užitečné odkazy"
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování odkazu "Město Zlín" v patičce "Užitečné odkazy" na hlavní stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Zkontrolovat přítomnost elementu "Město Zlín" 
+2. Klikutí na element "Město Zlín" 
+3. Keyword Get URL From New Tab -> získání URL v novém tabu, kde se otevře stránka
+4. URL by mělo být stejné jako "Město Zlín"
+5. Keyword Return To Previous Tab -> Zavření tabu a vrácení se zpět na původní stránku zsmalse.cz
+
+
+Očekávaný výsledek: Kliknutím na tlačítko se otevře v novém okně URL "Město Zlín" a následně se zavře.

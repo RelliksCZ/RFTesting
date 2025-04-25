@@ -1,0 +1,18 @@
+TC705 Kontrola zda je obrázek zarovnán na střed
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování zda je obrázek zarovnán na střed na stránce -> https://www.zsmalse.cz/o-skole
+
+Manuální
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+Pre-conditions
+	1. Otevřená stránka s URL https://www.zsmalse.cz/O-skole
+	2. Element obrázku je načten
+
+1. Zkontrolovat polohu obrázku
+2. Použití nástrojů pro měření na stránce pro ověření zarovnání na střed
+3. Ověření, že obrázek je zarovnán s ostatními prvky na stránce

@@ -1,0 +1,28 @@
+TC103 - Kontrola částí "Třídy"
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování částí "Třídy" v menu na stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Zkontrolovat přítomnost elementu - "První stupeň" -> Na stránce se nachází odkaz "První stupeň" a otevře stránku "První stupeň".
+2. Zkontrolovat přítomnost elementu - "1.A" -> Na stránce se nachází odkaz "1.A" a otevře stránku "1.A".
+3. Zkontrolovat přítomnost elementu - "1.B" -> Na stránce se nachází odkaz "1.B" a otevře stránku "1.B".
+4. Zkontrolovat přítomnost elementu - "1.C" -> Na stránce se nachází odkaz "1.C" a otevře stránku "1.C".
+5. Zkontrolovat přítomnost elementu - "2.A" -> Na stránce se nachází odkaz "2.A" a otevře stránku "2.A".
+6. Zkontrolovat přítomnost elementu - "2.B" -> Na stránce se nachází odkaz "2.B" a otevře stránku "2.B".
+7. Zkontrolovat přítomnost elementu - "2.C" -> Na stránce se nachází odkaz "2.C" a otevře stránku "2.C".
+8. Zkontrolovat přítomnost elementu - "2.D" -> Na stránce se nachází odkaz "2.D" a otevře stránku "2.D".
+9. Zkontrolovat přítomnost elementu - "3.A" -> Na stránce se nachází odkaz "3.A" a otevře stránku "3.A".
+10. Zkontrolovat přítomnost elementu - "3.B" -> Na stránce se nachází odkaz "3.B" a otevře stránku "3.B".
+11. Zkontrolovat přítomnost elementu - "4.A" -> Na stránce se nachází odkaz "4.A" a otevře stránku "4.A".
+12. Zkontrolovat přítomnost elementu - "4.B" -> Na stránce se nachází odkaz "4.B" a otevře stránku "4.B".
+13. Zkontrolovat přítomnost elementu - "5.A" -> Na stránce se nachází odkaz "5.A" a otevře stránku "5.A".
+14. Zkontrolovat přítomnost elementu - "5.B" -> Na stránce se nachází odkaz "5.B" a otevře stránku "5.B".
+
+
+Očekávaný výsledek: Jednotlivé elementy v scroll-dwon menu při kliknutí otevřou požadovanou stránku

@@ -1,0 +1,78 @@
+https://www.zsmalse.cz
+
+TS001 - Menu
+		TC_100 Kontrola částí menu
+		TC_101 Kontrola menu částí Školní rok 2023-2024
+		TC_102 Kontrola menu části Dokumenty
+		TC_103 Kontrola menu části Třídy
+		TC_104 Kontrola menu části Družina
+		TC_105 Kontrola menu části Jídelna
+		TC_106 Kontrola menu části Poradenství
+		TC_107 Kontrola menu části Prevence
+		TC_108 Kontrola otevření Lupy
+		TC_109 Kontrola menu části Žákovská knížka
+		TC_110 Kontrola menu části Logo
+
+TS002 - Hlavní stránka
+		TC_200 Kontrola zda je název školy zobrazen na domovské stránce
+		TC_201 Kontrola zda tlačítko posune stránku dolů
+		TC_202 Kontrola tlačítka Školní rok 2023/2024
+		TC_203 Kontrola tlačítka Školní družina
+		TC_204 Kontrola tlačítka Školní jídelna
+		TC_205 Kontrola tlačítka Ekoškola
+		TC_206 Kontrola tlačítka Všechny novinky
+		TC_208 Kontrola počtu novinek na stránce
+		TC_208 Kontrola počtu obrázků
+
+TS003 - Patička
+		TC_300 Kontrola odkazu "Město Zlín" v sekci "Užitečné odkazy"
+		TC_301 Kontrola odkazu "Krajská pedagogicko-psychologická poradna" v sekci "Užitečné odkazy"
+		TC_302 Kontrola odkazu "Dopravní spojení" v sekci "Užitečné odkazy"
+		TC_303 Kontrola odkazu "Informace a návod" v sekci "Žákovská knížka"
+		TC_304 Kontrola odkazu "Časté dotazy" v sekci "Žákovská knížka"
+		TC_305 Kontrola odkazu "Žákovská knížka" v sekci "Žákovská knížka"
+		TC_306 Kontrola odkazu "Co je ekoškola" v sekci "Ekoškola"
+		TC_307 Kontrola odkazu "Témata ekoškoly" v sekci "Ekoškola"
+		TC_308 Kontrola odkazu "7 kroků k ekoškole" v sekci "Ekoškola"
+		TC_309 Kontrola odkazu "Ekonoviny" v sekci "Ekoškola"
+		TC_310 Kontrola odkazu "Organizace školního roku 2023/2024" v sekci "Školní rok 2023/2024"
+		TC_311 Kontrola odkazu "Závazné termíny" v sekci "Školní rok 2023/2024"
+		TC_312 Kontrola odkazu "Projekty" v sekci "Školní rok 2023/2024"
+		TC_313 Kontrola odkazu "Zaměstnanci" v sekci "Školní rok 2023/2024"
+		TC_314 Kontrola odkazu "2023/2024" v sekci "Školní bulletin"
+		TC_315 Kontrola odkazu Office 365
+		TC_316 Kontrola odkazu tel. čísel
+		TC_317 Kontrola odkazu emailu
+
+TS004 - Layout
+		TC_400 Kontrola změny rozlišení obrázku při zmenšení stránky
+		TC_401 Kontrola počtu obrázků při zmenšení stránky
+		TC_402 Zobrazení tlačítka menu při zmenšení stránky
+		TC_403 Kontrola tlačítek v mobilním menu
+
+TS005 - Lupa
+		TC_500 Kontrola hledání při žádném parametru na hl. stránce
+		TC_501 Kontrola zavření vyhledávacího pole
+		TC_502 Kontrola počtu výsledků při hledání klíčového slova "O škole"
+		TC_503 Kontrola počtu výsledků při hledání klíčového slova "7 kroků"
+		TC_504 Kontrola počtu výsledků při hledání klíčového slova ",-,-,-,-,-,"
+		TC_505 Kontrola hledání při žádném parametru na stránce Jídelna
+
+TS006 - Video
+		TC_600 Kontrola spuštění videa na hlavní stánce při kliknutí na obrázek videa
+		TC_601 Kontrola spuštění videa na hlavní stánce při kliknutí na tlačítko videa
+		TC_602 Kontrola otevření videa na youtube
+		TC_603 Kontrola tlačítka "copy link"
+		TC_604 Kontrola přehrávání videa
+		TC_605 Kontrola nastavení hlasitosti videa
+		TC_606 Kontrola automatického přehrávání dalšího videa
+
+TS007 - O škole
+		TC_700 Kontrola nadpisu na stránce
+		TC_701 Kontrola počtu slov na stránce
+		TC_702 Kontrola zda je text zarovnán do bloku
+		TC_703 Kontrola otevření PDF
+		TC_704 Kontrola zda je obrázek pod PDF odkazem
+		TC_705 Kontrola zda je obrázek zarovnán na střed
+
+   

@@ -1,0 +1,18 @@
+TC401 Kontrola počtu obrázků při zmenšení stránky
+
+Stručný popis:
+Tento testovací případ slouží ke kontrole počtu obrázku při zmenšení stránky, na stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Keyword Change Window Size -> zmenšení velikosti browseru na 1200x800
+2. Získání počtu obrázků na stránce
+3. Počet obrázků by měl být roven 23
+4. Log ohledně počtu obrázků na zmenšené stránce
+
+
+Očekávaný výsledek: Oroginální počet obrázků na hl. stránce je 23, po zmenšení tedy zůstane opět 23 obrázků.

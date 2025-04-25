@@ -1,0 +1,18 @@
+TC402 Zobrazení tlačítka menu při zmenšení stránky
+
+Stručný popis:
+Tento testovací případ slouží ke kontrole zobrazení tlačítka menu při plném a 1200x800 rozlišneí, na stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Zvětšení stránky na celou obrazovku
+2. Tlačítko mobílního menu by nemělo být viditelné
+3. Zmenšení menu na 1200x800
+4. Počkat na tlačítko mobílního menu než bude viditelné
+
+
+Očekávaný výsledek: Stránka při zmenšení na 1200x800 zobrazovat tlačítko mobilního menu.

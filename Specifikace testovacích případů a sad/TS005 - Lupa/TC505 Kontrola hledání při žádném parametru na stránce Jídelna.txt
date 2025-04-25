@@ -1,0 +1,23 @@
+TC505 Kontrola hledání při žádném parametru na stránce Jídelna
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování přesměrování po vyhledání v lupě na stránce -> https://www.zsmalse.cz/jidelna
+
+Manuální
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+Pre-conditions
+	Počkat dokud element "Jídelna" v menu bude viditelný
+	Kliknout na element "Jídelna"
+	Počkat dokud element lupy bude viditelný
+	Kliknout na element lupy
+
+1. Počkat dokud element pro vyhledávání bude viditelný
+2. Kliknout na element
+3. Zkontrolovat, zda je stránka přesměrována na hl. stránku
+
+
+Očekávaný výsledek: Přesměrování na hl. stránku

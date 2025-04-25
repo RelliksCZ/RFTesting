@@ -1,0 +1,18 @@
+TC109 - Kontrola menu části Žákovská knížka
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování části "Žákovská knížka" v menu na stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Zkontrolovat přítomnost elementu - "Žákovská knížka"
+2. Na stránce se nachází odkaz "Žákovská knížka"
+3. Otevře stránku "Žákovská knížka".
+4. Stránka by měla mít požadované URL.
+
+
+Očekávaný výsledek: Při kliknutí na element by se měla otevřít url stránka bakalari.

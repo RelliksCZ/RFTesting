@@ -1,0 +1,21 @@
+TC101 - Kontrola částí "Školní rok 2023/2024"
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování všech částí v "Školní rok 2023/2024" v menu na stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Zkontrolovat přítomnost elementu - "Organizace školního roku 2023/2024" -> Na stránce se nachází odkaz "Organizace školního roku 2023/2024" a otevře stránku "Organizace školního roku 2023/2024".
+2. Zkontrolovat přítomnost elementu - "Závazné termíny 2023/2024" -> Na stránce se nachází odkaz "Závazné termíny 2023/2024" a otevře stránku "Závazné termíny 2023/2024".
+3. Zkontrolovat přítomnost elementu - "Projekty" -> Na stránce se nachází odkaz "Projekty" a otevře stránku "Projekty".
+4. Zkontrolovat přítomnost elementu - "Zaměstnanci 2023/2024" -> Na stránce se nachází odkaz "Zaměstnanci 2023/2024" a otevře stránku "Zaměstnanci 2023/2024".
+5. Zkontrolovat přítomnost elementu - "Seznam sešitů, pomůcek, pracovních šešitů pro školní rok 2023/2024" -> Na stránce se nachází odkaz "Seznam sešitů, pomůcek, pracovních šešitů pro školní rok 2023/2024" a otevře stránku "Seznam sešitů, pomůcek, pracovních šešitů pro školní rok 2023/2024".
+6. Zkontrolovat přítomnost elementu - "Školská rada" -> Na stránce se nachází odkaz "Školská rada" a otevře stránku "Školská rada".
+7. Zkontrolovat přítomnost elementu - "Sdružení rodičů a přátel školy" -> Na stránce se nachází odkaz "Sdružení rodičů a přátel školy" a otevře stránku "Sdružení rodičů a přátel školy".
+
+
+Očekávaný výsledek: Jednotlivé elementy v scroll-dwon menu při kliknutí otevřou požadovanou stránku

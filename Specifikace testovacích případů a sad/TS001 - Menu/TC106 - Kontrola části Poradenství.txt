@@ -1,0 +1,19 @@
+TC106 - Kontrola částí "Poradenství"
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování částí "Poradenství" v menu na stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Zkontrolovat přítomnost elementu - "Důležité webové stránky a kontakty" -> Na stránce se nachází odkaz "Důležité webové stránky a kontakty" a otevře stránku "Důležité webové stránky a kontakty".
+2. Zkontrolovat přítomnost elementu - "Činnost školního poradenského pracoviště" -> Na stránce se nachází odkaz "Činnost školního poradenského pracoviště" a otevře stránku "Činnost školního poradenského pracoviště".
+3. Zkontrolovat přítomnost elementu - "Školní psycholog" -> Na stránce se nachází odkaz "Školní psycholog" a otevře stránku "Školní psycholog".
+4. Zkontrolovat přítomnost elementu - "Informace pro rodiče od výchovného poradce" -> Na stránce se nachází odkaz "Informace pro rodiče od výchovného poradce" a otevře stránku "Informace pro rodiče od výchovného poradce".
+5. Zkontrolovat přítomnost elementu - "Kariérový poradce - Volba povolání" -> Na stránce se nachází odkaz "Kariérový poradce - Volba povolání" a otevře stránku "Kariérový poradce - Volba povolání".
+
+
+Očekávaný výsledek: Jednotlivé elementy v scroll-dwon menu při kliknutí otevřou požadovanou stránku

@@ -1,0 +1,19 @@
+TC104 - Kontrola částí "Družina"
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování částí "Družina" v menu na stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Zkontrolovat přítomnost elementu - "Vnitřní řád školní družiny" -> Na stránce se nachází odkaz "Vnitřní řád školní družiny" a otevře stránku "Vnitřní řád školní družiny".
+2. Zkontrolovat přítomnost elementu - "Informace o provozu školní družiny" -> Na stránce se nachází odkaz "Informace o provozu školní družiny" a otevře stránku "Informace o provozu školní družiny".
+3. Zkontrolovat přítomnost elementu - "Roční plán ŠD 2023/2024" -> Na stránce se nachází odkaz "Roční plán ŠD 2023/2024" a otevře stránku "Roční plán ŠD 2023/2024".
+4. Zkontrolovat přítomnost elementu - "Zájmové kroužky 2023/2024" -> Na stránce se nachází odkaz "Zájmové kroužky 2023/2024" a otevře stránku "Zájmové kroužky 2023/2024".
+5. Zkontrolovat přítomnost elementu - "Oddělení školní družiny 2023/2024" -> Na stránce se nachází odkaz "Oddělení školní družiny 2023/2024" a otevře stránku "Oddělení školní družiny 2023/2024".
+
+
+Očekávaný výsledek: Jednotlivé elementy v scroll-dwon menu při kliknutí otevřou požadovanou stránku

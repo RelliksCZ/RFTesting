@@ -1,0 +1,17 @@
+TC702 Kontrola zda je text zarovnán do bloku
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování zarovnání textu na stránce -> https://www.zsmalse.cz/o-skole
+
+Manuální
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+Pre-conditions
+	1. Otevřená stránka s URL https://www.zsmalse.cz/O-skole
+
+1. Použijte nástroj pro počítání slov nebo kopírujte text do textového editoru s touto funkcí.
+2. Spočítejte slova na celé stránce.
+3. Počet slov by měl být menší než 500 slov

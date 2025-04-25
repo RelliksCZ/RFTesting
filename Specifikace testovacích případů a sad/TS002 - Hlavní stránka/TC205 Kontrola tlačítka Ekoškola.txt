@@ -1,0 +1,18 @@
+TC205 Kontrola tlačítka Ekoškola
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování tlačítka "Ekoškola" na hlavní stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Zkontrolovat přítomnost elementu "Ekoškola" 
+2. Klikutí na element "Ekoškola" 
+3. URL by mělo být stejné jako "Ekoškola" 
+4. Jít zpět na hl. stránku
+
+
+Očekávaný výsledek: Kliknutím na tlačítko se otevře stránka "Ekoškola"

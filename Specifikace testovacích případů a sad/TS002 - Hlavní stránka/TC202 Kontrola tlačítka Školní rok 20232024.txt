@@ -1,0 +1,18 @@
+TC202 Kontrola tlačítka Školní rok 20232024
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování tlačítka "Školní rok 2023/2024" na hlavní stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Zkontrolovat přítomnost elementu "Školní rok 2023/2024"
+2. Klikutí na element "Školní rok 2023/2024"
+3. URL by mělo být stejné jako "Školní rok 2023/2024"
+4. Jít zpět na hl. stránku
+
+
+Očekávaný výsledek: Kliknutím na tlačítko se otevře stránka "Školní rok 2023/2024" 

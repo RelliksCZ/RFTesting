@@ -1,0 +1,22 @@
+TC501 Kontrola zavření vyhledávacího pole
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování zavření lupy na stránce -> https://www.zsmalse.cz/
+
+Manuální
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+Pre-conditions
+	Počkat dokud element lupy bude viditelný
+	Kliknout na element lupy
+
+1. Počkat dokud element pro zavření lupy bude viditelný
+2. Kliknout na element
+3. Zkontrolování, zda se vyhledávací pole zavřelo
+
+
+
+Očekávaný výsledek: Vyhledávací pole by se mělo po kliknutí na tlačítko pro zavření zavřít

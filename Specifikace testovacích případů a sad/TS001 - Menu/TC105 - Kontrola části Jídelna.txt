@@ -1,0 +1,21 @@
+TC106 - Kontrola částí "Jídelna"
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování částí "Jídelna" v menu na stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Zkontrolovat přítomnost elementu - "Objednávky přes internet" -> Na stránce se nachází odkaz "Objednávky přes internet" a otevře stránku "Objednávky přes internet".
+2. Zkontrolovat přítomnost elementu - "Přihláška ke stravování" -> Na stránce se nachází odkaz "Přihláška ke stravování" a otevře stránku "Přihláška ke stravování".
+3. Zkontrolovat přítomnost elementu - "Dietní stravování" -> Na stránce se nachází odkaz "Dietní stravování" a otevře stránku "Dietní stravování".
+4. Zkontrolovat přítomnost elementu - "Původ surovin" -> Na stránce se nachází odkaz "Původ surovin" a otevře stránku "Původ surovin".
+5. Zkontrolovat přítomnost elementu - "Oznámení o cenách školního stravování" -> Na stránce se nachází odkaz "Oznámení o cenách školního stravování" a otevře stránku "Oznámení o cenách školního stravování".
+6. Zkontrolovat přítomnost elementu - "Základní informace pro strávníky" -> Na stránce se nachází odkaz "Základní informace pro strávníky" a otevře stránku "Základní informace pro strávníky".
+7. Zkontrolovat přítomnost elementu - "Certifikát, ocenění" -> Na stránce se nachází odkaz "Certifikát, ocenění" a otevře stránku "Certifikát, ocenění".
+
+
+Očekávaný výsledek: Jednotlivé elementy v scroll-dwon menu při kliknutí otevřou požadovanou stránku

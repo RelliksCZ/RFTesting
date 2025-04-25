@@ -1,0 +1,21 @@
+TC604 Kontrola přehrávání videa
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování zkopírování yt odkazu na stránce -> https://www.zsmalse.cz/
+
+Manuální
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+Pre-conditions
+	Počkat dokud element videa bude viditelný
+
+1. Kliknout na spuštění videa
+2. Sledovat, zda přehrávání probíhá hladce bez záseků nebo zpoždění
+3. Zkontrolvoat funkčnost přehrávání při různých kvalitách videa
+
+
+
+Očekávaný výsledek: Video se přehrává bez technických problémů ve všech podporovaných kvalitách

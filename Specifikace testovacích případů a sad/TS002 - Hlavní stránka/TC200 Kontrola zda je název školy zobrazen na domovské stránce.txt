@@ -1,0 +1,16 @@
+TC200 Kontrola zda je název školy zobrazen na domovské stránce
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování zda název školy je stejný jako název Základní škola Mikoláše Alše Zlín na adrese -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Počkat než se zobrazí element s textem školy
+2. Zavolání Keywordu "Check School Name On Homepage", který porovná element s názvem školy s opravdovým názvem školy
+
+
+Očekávaný výsledek: Název stránky by měl být roven názvu školy

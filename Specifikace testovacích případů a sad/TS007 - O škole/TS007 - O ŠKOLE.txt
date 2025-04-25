@@ -1,0 +1,19 @@
+TS007 - O škole
+
+Stručný popis:
+Tahle testovací sada slouží k provádění testů na stránce -> https://www.zsmalse.cz/o-skole
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+Pre-conditions
+	1. Otevřený Chrome browser s URL: https://www.zsmalse.cz/o-skole
+	2. Browser je zvětšen na celou stránku
+	3. Lokace stránky by měla být https://www.zsmalse.cz/o-skole
+	4. Počkání na načtení elementu Cookies
+	5. Zakliknutí "Odmítnout vše" v elementu Cookies
+	6. Počkat něž než element "Cookies" nebude viditelný
+
+Post-conditions
+	1. Zavření browseru

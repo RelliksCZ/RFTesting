@@ -1,0 +1,19 @@
+TC107 - Kontrola částí "Prevence"
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování částí "Prevence" v menu na stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Zkontrolovat přítomnost elementu - "Školní metodici prevence" -> Na stránce se nachází odkaz "Školní metodici prevence" a otevře stránku "Školní metodici prevence".
+2. Zkontrolovat přítomnost elementu - "Informační materiál o aktuálních rizikových jevech" -> Na stránce se nachází odkaz "Informační materiál o aktuálních rizikových jevech" a otevře stránku "Informační materiál o aktuálních rizikových jevech".
+3. Zkontrolovat přítomnost elementu - "Kontakty na odbornou pomoc" -> Na stránce se nachází odkaz "Kontakty na odbornou pomoc" a otevře stránku "Kontakty na odbornou pomoc".
+4. Zkontrolovat přítomnost elementu - "Zajímavé dokumenty a stránky" -> Na stránce se nachází odkaz "Zajímavé dokumenty a stránky" a otevře stránku "Zajímavé dokumenty a stránky".
+5. Zkontrolovat přítomnost elementu - "Linka bezpečí" -> Na stránce se nachází odkaz "Linka bezpečí" a otevře stránku "Linka bezpečí".
+
+
+Očekávaný výsledek: Jednotlivé elementy v scroll-dwon menu při kliknutí otevřou požadovanou stránku

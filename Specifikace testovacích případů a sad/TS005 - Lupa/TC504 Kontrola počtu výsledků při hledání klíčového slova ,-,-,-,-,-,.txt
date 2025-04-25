@@ -1,0 +1,24 @@
+TC504 Kontrola počtu výsledků při hledání klíčového slova ",-,-,-,-,-,"
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování výsledků po vyhledání v lupě na stránce -> https://www.zsmalse.cz/
+
+Manuální
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+Pre-conditions
+	Počkat dokud element lupy bude viditelný
+	Kliknout na element lupy
+
+1. Počkat dokud element pro vyhledávání bude viditelný
+2. Kliknout na element
+3. Vložit do pole text ",-,-,-,-,-,"
+4. Počkat dokud element tlačítka "Hledat" bude viditelný
+5. Kliknout na element Hledat
+6. Zkontrolovat, zda počet výsledků je roven 0
+
+
+Očekávaný výsledek: Stránka zobrází stránku, kde bude 0 výsledků.

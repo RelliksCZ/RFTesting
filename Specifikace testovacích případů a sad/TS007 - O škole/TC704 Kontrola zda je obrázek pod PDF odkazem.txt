@@ -1,0 +1,18 @@
+TC704 Kontrola zda je obrázek pod PDF odkazem
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování zda je obrázek umístěn pod pdf na stránce -> https://www.zsmalse.cz/o-skole
+
+Manuální
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+Pre-conditions
+	1. Otevřená stránka s URL https://www.zsmalse.cz/O-skole
+	2. Elementy obrázku a PDF jsou viditelné
+
+1. Zkontrolovat polohu obrázku ve vztahu k PDF odkazu
+2. Ověření, že obrázek je přímo umístěn pod odkazem
+3. Zkontrolovat správné načtení obrázku a jeho kvalitu

@@ -1,0 +1,19 @@
+TC302 Kontrola odkazu Dopravní spojení v sekci Užitečné odkazy
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování odkazu "DSZO" v patičce "Užitečné odkazy" na hlavní stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Zkontrolovat přítomnost elementu "DSZO" 
+2. Klikutí na element "DSZO" 
+3. Keyword Get URL From New Tab -> získání URL v novém tabu, kde se otevře stránka
+4. URL by mělo být stejné jako "DSZO" 
+5. Keyword Return To Previous Tab -> Zavření tabu a vrácení se zpět na původní stránku zsmalse.cz
+
+
+Očekávaný výsledek: Kliknutím na tlačítko se otevře v novém okně URL "DSZO" a následně se zavře.

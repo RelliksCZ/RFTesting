@@ -1,0 +1,24 @@
+TC400 Kontrola změny rozlišení obrázku při zmenšení stránky
+
+Stručný popis:
+Tento testovací případ slouží ke kontrole změny rozlišení obrázku při zmenšení stránky, na stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+Pre-conditions
+	1. Maximize Browser Window
+	2. Location Should Be  ${URL_MainPage_MainURL}
+
+1. Počkat než element s obrázkem bude viditelný
+2. Keyword Get Size Of Img -> získání velikosti obrázku
+3. Keyword Change Window Size -> zmenšení velikosti browseru na 1200x800
+4. Keyword Get Size Of Img -> získání velikosti obrázku
+5. Rozlišení obrázku v malém okně by mělo být menší než rozlišení obrázku v plném okně
+6. Log originální velikost obrázku, a zmenšeného obrázku
+
+
+Očekávaný výsledek: Obrázek zobrazený ve full screen browseru bude mít větší rozlišení než obrázek zobrazený ve velikosti 1200x800.

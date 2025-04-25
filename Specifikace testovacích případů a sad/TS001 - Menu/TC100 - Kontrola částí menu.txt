@@ -1,0 +1,24 @@
+TC100 - Kontrola částí menu
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování částí menu na stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Zkontrolovat přítomnost elementu - "Školní rok 2023/2024" -> Na stránce se nachází odkaz "Školní rok 2023/2024" a otevře stránku "Školní rok 2023/2024"
+2. Zkontrolovat přítomnost elementu - "O škole" -> Na stránce se nachází odkaz "O škole" a otevře stránku "O škole".
+3. Zkontrolovat přítomnost elementu - "Dokumenty" -> Na stránce se nachází odkaz "Dokumenty" a otevře stránku "Dokumenty".
+4. Zkontrolovat přítomnost elementu - "Třídy" -> Na stránce se nachází odkaz "Třídy" a otevře stránku "Třídy".
+5. Zkontrolovat přítomnost elementu - "Družina" -> Na stránce se nachází odkaz "Družina" a otevře stránku "Družina".
+6. Zkontrolovat přítomnost elementu - "Jídelna" -> Na stránce se nachází odkaz "Jídelna" a otevře stránku "Jídelna".
+7. Zkontrolovat přítomnost elementu - "Poradenství" -> Na stránce se nachází odkaz "Poradenství" a otevře stránku "Poradenství".
+8. Zkontrolovat přítomnost elementu - "Prevence" -> Na stránce se nachází odkaz "Prevence" a otevře stránku "Prevence".
+9. Zkontrolovat přítomnost elementu - "Galerie" -> Na stránce se nachází odkaz "Galerie" a otevře stránku "Galerie".
+
+
+Očekávaný výsledek: Jednotlivé elementy v menu při kliknutí otevřou požadovanou stránku

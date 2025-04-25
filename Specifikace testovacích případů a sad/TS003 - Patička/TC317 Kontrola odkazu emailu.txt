@@ -1,0 +1,16 @@
+TC317 Kontrola odkazu emailu
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování emailu v patičce na hlavní stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Zkontrolovat přítomnost elementu emailu
+2. Keyword Check Email -> získání textu elementu, stringy by měly být stejné
+
+
+Očekávaný výsledek: Odkaz emailu by měl být stejný jako text.

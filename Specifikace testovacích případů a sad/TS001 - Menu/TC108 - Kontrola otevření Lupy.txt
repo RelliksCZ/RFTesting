@@ -1,0 +1,18 @@
+TC108 - Kontrola otevření Lupy
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování části Lupa v menu na stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Zkontrolovat přítomnost elementu Lupy.
+2. Kliknout na element.
+3. Měl by být viditelný nový element "tělo lupy".
+4. Jít zpět na hlavní stránku a zkontrolovat zda se nacházím na hl. stránce.
+
+
+Očekávaný výsledek: Při kliknutí na lupu by se mělo zobrazit pole pro vyhledávání s tlačítkem hledat a možností zavřít lupu.

@@ -1,0 +1,18 @@
+TC403 Kontrola tlačítek v mobilním menu
+
+Stručný popis:
+Tento testovací případ slouží ke kontrole kontrole tlačítek v mobilním menu, na stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Zmenšení menu na 1200x800
+2. Počkat na tlačítko mobílního menu než bude viditelné
+3. Kliknout na tlačítko mobilní menu
+4. Počkat než všechny tlačítka v menu budou viditelná
+
+
+Očekávaný výsledek: Tlačítka v mobilním menu budou zobrazena všechna.

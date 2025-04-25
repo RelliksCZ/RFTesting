@@ -1,0 +1,19 @@
+TC201 Kontrola zda tlačítko posune stránku dolů
+
+Stručný popis:
+Tento testovací případ slouží ke pozice stránky před a po kliknutí na posouvací tlačítko myši na stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Zkontrolovat přítomnost elementu tlačítko myši
+2. Získání aktuální pozice browseru pomocí keyword "Get Scroll Position"
+3. Kliknutí na element tlačítka
+4. Získání pozice po kliknutí tlačítka myši
+5. Pozice po kliknutí na tlačítko myši by mělo být větší než před kliknutím.
+
+
+Očekávaný výsledek: Kliknutím na tlačítko se stránka posune dolů

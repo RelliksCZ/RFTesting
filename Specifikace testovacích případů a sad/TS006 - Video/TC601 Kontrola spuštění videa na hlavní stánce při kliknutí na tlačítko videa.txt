@@ -1,0 +1,20 @@
+TC601 Kontrola spuštění videa na hlavní stánce při kliknutí na tlačítko videa
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování přehrání videa při kliknutí na yt tlačítko na stránce -> https://www.zsmalse.cz/
+
+Manuální
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+
+1. Počkat dokud element youtube tlačítka videa bude viditelný
+2. Kliknout na element
+3. Sledovat, zda se video začne načítat a přehrávat
+4. Zkontrolovat kvalitu videa a zda přehrávání probíhá bez problémů
+
+
+
+Očekávaný výsledek: Kliknutím na tlačítko videa dojde k jeho spuštění a bezproblémovému přehrávání

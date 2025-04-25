@@ -1,0 +1,23 @@
+TC102 - Kontrola částí "Dokumenty"
+
+Stručný popis:
+Tento testovací případ slouží ke zkontrolování všech částí v "Dokumenty" v menu na stránce -> https://www.zsmalse.cz/
+
+Manuální + automatizované
+
+Datum 2/3/2024
+Verze 1.0.0.0.0.0.0.1
+Autor - Martin Bobál
+
+1. Zkontrolovat přítomnost elementu - "Školní vzdělávací program" -> Na stránce se nachází odkaz "Školní vzdělávací program" a otevře stránku "Školní vzdělávací program".
+2. Zkontrolovat přítomnost elementu - "Řády" -> Na stránce se nachází odkaz "Řády" a otevře stránku "Řády".
+3. Zkontrolovat přítomnost elementu - "Formuláře" -> Na stránce se nachází odkaz "Formuláře" a otevře stránku "Formuláře".
+4. Zkontrolovat přítomnost elementu - "Inspekční zprávy" -> Na stránce se nachází odkaz "Inspekční zprávy" a otevře stránku "Inspekční zprávy".
+5. Zkontrolovat přítomnost elementu - "Výroční zprávy" -> Na stránce se nachází odkaz "Výroční zprávy" a otevře stránku "Výroční zprávy".
+6. Zkontrolovat přítomnost elementu - "Povinně zveřejňované informace" -> Na stránce se nachází odkaz "Povinně zveřejňované informace" a otevře stránku "Povinně zveřejňované informace".
+7. Zkontrolovat přítomnost elementu - "Rozpočet a střednědobý výhled rozpočtu" -> Na stránce se nachází odkaz "Rozpočet a střednědobý výhled rozpočtu" a otevře stránku "Rozpočet a střednědobý výhled rozpočtu".
+8. Zkontrolovat přítomnost elementu - "Návrh rozpočtu na rok 2024 a návrh střednědobého výhledu rozpočtu na léta 2025-2026" -> Na stránce se nachází odkaz "Návrh rozpočtu na rok 2024 a návrh střednědobého výhledu rozpočtu na léta 2025-2026" a otevře stránku "Návrh rozpočtu na rok 2024 a návrh střednědobého výhledu rozpočtu na léta 2025-2026".
+9. Zkontrolovat přítomnost elementu - "Whistleblowing" -> Na stránce se nachází odkaz "Whistleblowing" a otevře stránku "Whistleblowing".
+
+
+Očekávaný výsledek: Jednotlivé elementy v scroll-dwon menu při kliknutí otevřou požadovanou stránku
